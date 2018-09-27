@@ -1,0 +1,375 @@
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<style type="text/css">
+		td {
+			font-size: 10pt;
+		}
+		
+		a:link {
+			text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var COL_4_LINE = 10;
+		var IMG_WIDTH = 128;
+		var NUM_BOLD = 10;
+
+		var cast_thrones = [
+			[1, "브랜<BR>브랜든 스타크", "Brandon Stark", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""]
+		];
+
+		var cast_arrow = [
+			[138, "올리버 퀸", "Oliver Queen", "https://s-media-cache-ak0.pinimg.com/236x/f2/41/dc/f241dc94a737788ea383df120a4d64b7.jpg"],
+			[115, "테아 퀸", "Thea Queen", "https://s-media-cache-ak0.pinimg.com/236x/b4/54/93/b4549397b7347785f9686fe3838ee357.jpg"],
+			[47, "모이라 퀸", "Moira Queen", "https://s-media-cache-ak0.pinimg.com/236x/b4/a5/fc/b4a5fc0a044297b56e966c5a03a8c61b.jpg"],
+			[7, "로버트 퀸", "Robert Queen", "https://vignette.wikia.nocookie.net/marvel_dc/images/9/93/Robert_Queen_Arrow_TV_Series_002.jpg/revision/latest?cb=20130422232527"],
+			[14, "월터 스틸", "Walter Steele", "https://s-media-cache-ak0.pinimg.com/236x/1c/5b/ac/1c5bac8e15e92cfa9b809f62fab9089b.jpg"],
+
+			[115, "존 디글", "John Diggle", "https://s-media-cache-ak0.pinimg.com/564x/f8/eb/0e/f8eb0e47e970b1749c0ba66fe7f7ab5e.jpg"],
+			[53, "로이 하퍼", "Roy Harper", "https://s-media-cache-ak0.pinimg.com/236x/52/c9/a5/52c9a540131bbf997f5d29591365f868.jpg"],
+			[109, "펠리시티 스모크", "Felicity Smoak", "https://s-media-cache-ak0.pinimg.com/236x/b9/62/7b/b9627bdf25f029c7524b2c9a42483ba6.jpg"],
+			[10, "도나 스모크", "Donna Smoak", "https://s-media-cache-ak0.pinimg.com/564x/39/8b/0c/398b0cd7e1a584e4993903238f4380eb.jpg"],
+			[0, "", "", ""],
+
+			[115, "퀜틴 랜스", "Quentin Lance", "https://s-media-cache-ak0.pinimg.com/236x/0f/2c/ea/0f2cea1f2127a717713c3eb94dfa8cd0.jpg"],
+			[98, "로럴 랜스", "Laurel Lance", "https://s-media-cache-ak0.pinimg.com/236x/3c/c3/df/3cc3df5879f0d37c4997f70da48dd228.jpg"],
+			[31, "사라 랜스", "Sara Lance", "https://s-media-cache-ak0.pinimg.com/236x/74/c0/a5/74c0a5f9d49706caf11511a5134f8392.jpg"],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[65, "말콤 멀린", "Malcolm Merlyn", "https://s-media-cache-ak0.pinimg.com/236x/10/19/ab/1019abba5b5e22759b8f1345b613e659.jpg"],
+			[28, "토미 멀린", "Tommy Merlyn", "https://s-media-cache-ak0.pinimg.com/236x/88/3f/cd/883fcdb1f83be78bef9d4ad888f96447.jpg"],
+			[21, "샤도", "Shado", "https://s-media-cache-ak0.pinimg.com/564x/df/6f/09/df6f09b4bf8fcf115bbfadfe119bffca.jpg"],
+			[10, "야오 페이", "Yao Fei", "https://s-media-cache-ak0.pinimg.com/236x/51/b2/c9/51b2c9e77d5fece689c80324932de351.jpg"],
+			[20, "레이 파머", "Ray Palmer", "https://s-media-cache-ak0.pinimg.com/236x/e8/5b/fe/e85bfeec2940356f69d6a37ef9377f27.jpg"],
+
+			[36, "슬레이드 윌슨", "Slade Wilson", "https://s-media-cache-ak0.pinimg.com/236x/15/86/03/158603b75b0680d3aa7c98ec3ee79033.jpg"],
+			[12, "세바스찬 블러드", "Sebastian Blood", "http://ww1.prweb.com/prfiles/2013/07/21/10949050/Kevin%20Alejandro.jpg"],
+			[10, "첸 나 웨이", "China White", "https://s-media-cache-ak0.pinimg.com/236x/c2/7c/59/c27c59e887920b215eb79907c7f69dbe.jpg"],
+			[4, "헬레나 버티넬리", "Helena Bertinelli", "https://s-media-cache-ak0.pinimg.com/236x/a4/c1/05/a4c1057a8515bf39f066b67aa7ec1eea.jpg"],
+			[0, "", "", ""],
+
+			[34, "커티스 홀트", "Curtis Holt", "https://s-media-cache-ak0.pinimg.com/564x/15/c1/ce/15c1ce44d106055263bf092cd7bcbdf1.jpg"],
+			[24, "라일라", "Lyla Michaels", "https://s-media-cache-ak0.pinimg.com/236x/8c/b9/59/8cb959b0b55533249731cb33ffdd748d.jpg"],
+			[17, "아만다 윌러", "Amanda Waller", "https://s-media-cache-ak0.pinimg.com/236x/f5/ec/f4/f5ecf4291cfe8b829cfea3f8b42a5e89.jpg"],
+			[10, "플로이드 로튼", "Deadshot", "https://s-media-cache-ak0.pinimg.com/236x/e6/58/68/e65868c438ba2ccbcbdcb9109fc903c0.jpg"],
+			[0, "", "", ""],
+
+			[16, "닛사 알 굴", "Nyssa al Ghul", "https://s-media-cache-ak0.pinimg.com/236x/12/6e/f0/126ef043d001e2ec35149bf8067874cc.jpg"],
+			[10, "라스 알 굴", "Ra's al Ghul", "https://pmctvline2.files.wordpress.com/2015/12/legends-of-tomorrow-matt-nable.jpg?w=620"],
+			[5, "탈리아 알 굴", "", "http://mblogthumb1.phinf.naver.net/MjAxNzAzMDVfMjMx/MDAxNDg4NzEzNjM3OTg2.3apm-8G-QyC-lq2v2OQDz80n00QfvFNjWgJ-YRctUrIg.3qH5vOJeSh2SZEPUwwRz2UZ2ezRwAGZ6dTni1BysKd0g.JPEG.yomygirlmon/MV5BNmI1YWE3ZDgtNGJhYy00MjNiLWI0ODUtMTZkMzI3MTBiYjIxL2ltYWdlXkEyXkFqcGdeQXVyNjc5Mjg0NjU._V1_SY1000_CR0%2C0%2C666%2C1000_AL_.jpg?type=w800"],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[19, "야마시로 마세오", "Maseo Yamashiro", "https://s-media-cache-ak0.pinimg.com/236x/45/6f/6f/456f6f418420cad86752459a3be83f49.jpg"],
+			[15, "야마시로 타츠", "Tatsu Yamashiro", "https://s-media-cache-ak0.pinimg.com/236x/66/b1/48/66b1484f2cf33ad712a6d5d2686d1f38.jpg"],
+			[13, "야마시로 아키오", "Akio Yamashiro", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEBAQDxAQEBAQEA8PDQ8PDw8PDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQFy0dHx0rLS0rLS0tLS0rLS0tLS0tLS0tKy0tLS0tLS0tKy0tLS0tLS4tLS0tLS0tLTctLS0tK//AABEIAQQAwgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EADsQAAIBAgQDBgUCBAQHAAAAAAABAgMRBBIhUQUxQQYTImFxkRQyUoGhI7FCYsHRFXLh8DM0Q1OCssL/xAAZAQADAQEBAAAAAAAAAAAAAAAAAgMEAQX/xAAjEQACAgICAgIDAQAAAAAAAAAAAQIRAxIhMRNBBCIyUWFx/9oADAMBAAIRAxEAPwDyoRje8W4neLcx0ax4DM63DvFudoB4DO8W4d4tzlMB4DO8W4d4twpgKyvWJXUW5BVmtx4o42VKnMYOmxtzQjOyaiWaZVosswmicykOiZAxiqLcdmJ0UsYhGCYoxxjaY5iQFYClWtzJ8P0Ia3Mmw/Qd9Crs6CgnZeIc4v6h+GwzcUSPCSMLuzWpRM9xe4Fh4VgPYtxOSzvcTM9xAN5isXM9wzPcQACxcz3DM9xAALFzPcMz3EAAFuFxAALAAsAAAtwsOUdwAamyWlO3NjGMOVZ1Oiwqw9YhFQDmqO7svQknyHlCMrFilWvoxXEZSG1eZPhua9SCrzJsPzQPoF2dvgV4ETyIeHLwInlExPsCnJaijnEU6McZ8IhPhEXbA4lvIxtEUvhECwiLthLB5Gd0RU+EQvwiLdgsc3Yaop/CIPhUXLA0d3YaIp/CoT4ZFxobYN2c1RWWGQ2pRjFXZZqPKrmZVquTu/sPC5CypCTlsMYXEZYlYCAB04AAAAAIAACVyvYsUJFJEtOWorXAyfJ2eAxrUEieWOZm8OqeBFpzPOk+TbHHBqxXjH5gQuQBZ3xxM1AOGlSYCCgAAIOEOAANCgADWNHtDTpwp4+dlbcopaEmKnmk9uSI4muCpGebtjZISxJlElEYQjAc0IdAQAAAAAAAAAAAOj7O42MmqUlaTXhe/rsdFLDo8+w9VwlGUXZxaaZ6HRnmjGW6T/BkzQSdorCbqiHuEBLYCI+zObQjHDWdKCCoAR0AAUQDoogCgAjMvGYh5mk9DRrzsnbmYlV3d3zLYY3ySyukC5k1Ck5O0Vf9hcFhZVJKMVq+b2W51+GwUKcFFdOb6t7jZcyhwLjxOfJz0MMo87ZuifIrYmhNayXpbVHTYnCxa1+zK8cM4ctY7Eo5vZSWP0c08NLm1b1IpQaOxlQT1sQVcNHZeyHXyP4K8ByVgNPG0Fd2XsUZQLqSZGUKIgFYgwgAAAdHQV2l5nccGxcZUo9GvC1s1zOFOi4BPMp+q/Yhn/GyuGO0qOj76IFHItxDHsavB/TEq4lIjji1czpyuIbViRneQ2o1LiuVjPw1boS1qmhJwp0OpcErxSQsMQmZUmJFsp4kJ5DY75bj1NGLmZZoZhXio6shpRhnajuzFnSeay1bdl72NnCT8Ub7knC8DmxEW+UFKT9czSFjPS7HcN0v9NTh2CVKCS5vWT3ZW4hhJaySbelnFu61X2NitCyKirW0MkZtvY0ygqpGPg6kmm5O15O0ZSWZLpc2uGxzJ5umn3Ks6SbvZexK63dx/wB8x5y26ROEGuxMbUSdkU5yclZFDFYlttl3D4iFOEXN+Kfyq136lVDVE2+TMxdKa8zPnfqbOIxcZXs+tvuZ9aNy+Nv2iMo/plGSGktaNiIuRYAAAAHUcDwrjSTtrLX7dDmacbyS3aXuz0GjBRiklokkvYz/ACHxRXC6dlXu2BbAyUaPMcDYHEByPQM1CQHylcQAGQRQMAQBQiRcoTKgtxWrBcGlCauvVHScNwmSpUl9Sj/U4rOzsuzuZ0YuTbbvz2vojJ8iLjGzTgdujTxMLoxq0bM37aGRi4ambGzRIbSjp5vkjL4lUfI06tapGdKNOMXC16jf9zO4pXi5xg/mm7Ky0u3ZF8cebJTdIxqvIv04xqQV0nZW80UcWsrs9yzw+6T2NUvxsglyNq0XGGSKi4328RUimuZpVmVJHYybXIrgl0VMStCoXcVyKRWPRCfYAADCmv2cwfeVcz5Q/wDbodi0cz2fuuX4Ntzl5mHNP7GnHibVonsKVM8gJbD+GRxY5E0lEjkb7shQgthqQ9AdQlgsFwuB0LC2EuKAA0dxwjSjT/yr9jhjseA1s1GHl4X9mZflL6l/jv7G0paFTFJPkWFyMPjM6kL5X4eiMeONujTIbiq+X0MqpVXeKas3H5b77jnjM8Msnla11Ts/uipU5Zou6/qbseOjNOVlqjh1OWaevXyLVVJaLRFbDy0QtaodabYqaIa0yC4lWdxjZVKhbsgxUisiavqQ2Kx6M8+WBLQhdjMpYoqwSfAKJtcEdmzZczF4H8zN10zzs0fsbsWSo0QZwH5AJ6j+VHG2Ah70TvT06MOyJwIe9DvQoN0TCEPektOlUl8sJO/K0XqFBsKBu4bsnXlRdSTjCXONJ6za89vQzYcMqNtO0bc73v7E1kg/fQyTfSKhvdmZyWdfw6P7kFHh0I87yfny9jcwNJJLoQzZU40jRixtO2adOV0UeIvSxPCeTny6FPG1FJmSC+xeTMTG4ey0SKdKm09jTxdSxmzrG+DbRmm+S5KyjdFGrUGOu7WIXIdRok2SNjJsS5FVd9EPRxukEZ3HzQUsLv7Ejw/sDaOJuuiv5ktESshaQPoX2a/BH4zoWc3wedpnQyrLYy5OykU2NAb33kKIdpnBAWKWGcmoxTlJuyS1bZ0uA7HSVpYjla/dweq8pP8AsbZ5YQ7ZBQbOWoUJVJKMIuUnyUVdm5heylaSvUcaa2+Z/g7HD0KdGGWnCMF5LV+r6kFXF2VkY5fLlLiCotHCl2ZeC7OU4fNK73UVf3d7fYvUMFQptzyup0XeSc3HXpfkVZYy75g53TafXUk3OXbKpJdGpi5OmlODvTfS/wCxk8Rh3kXVp/MvmW6/uXuF4hOLoz63cP7FGpejUbXy9V5HIKmctlHCSz6mtS0RSr4ZQkq9PWlN+Nf9uW/oXG9DuTnotGVokc+jKOJhbVC1a1iGeIuEYtA2ZuNqXM2TNjGxVrmNLmbcT4M8+xAYqQpQSiGUmybDU9ySjTc4y+pPT2HQhJc1Y45ehUh65hJgnqEiYxVxAUgxAUivoT2aXCP+IdI4xOY4Y/1EdK0YfkfkbcDWo3LEBLAR5L7HKcNxkqFSNSFsy3V011R3vCu0UMQtPDVS8VNvmt47o4DFYeVKbhOLjKOjTIadWUJKUW1JO6aN2XDHIrMTpI6HtDxevGrKKywjzi0rtr1ZhT4jVfOpL8I1q9dYuleyVWHNb+a8mZ+J4NWppOcUr9Lq69TuNRiqaSZOTforfHVPrf4FjxGquU+fPRCVMFNa2v6O5C6Ulzi/YtUWTbZbhxOqrPNqndNpXQtbilabzSqSb+1vYpxpyfJP2ZLDDTeihL2DWP6GUmbvBOL2up6xelSPRrdGli4d2k4vNSfySWuXyZx2SUHqnFrfQ2+F8Vsss34X80X+6M2TD7Q0Z0PxFUgp1rljG0YNXpTi19Obl6GVGeV6hGNopvZaxdTQoE9SVyBFYqkKxUK9ECJ6VDrL7I63QC4dZY+b1ZJTheLfnoQYmuo+bfTyGw4grWcX9hdW+RLRPCSlzVpLqNnAqSxSvdJkkceuq9tTujDZEeIEpElSUZ/K7PZ6JjIK3MddC+y7w5/qI6jPocpgn40dPHkjNlXJWMmuh2cQYBPVHd2bHaLg8MUlyjUS/Tn/APMvI83xtCVKcqc1llF2aPV1U1Xqct26walNSSWZK6e62F+Llaer6Fb4OOpVXBqUXZo7eFdYrB95/FDSS2ktH/Q4aato9HsdD2OxP/MUek6bmvWPP8P8GvPC47L0JdMip63WwjpCU3+oyd6Nk3wMRRiSU5WdxXG4xxOWBT4zJOz8r/cyLl3iU7yt9ikasaqJGXYC3EAc4LcLiAACqT3Fzvd+40AAVsQAAAAAAAHKo9xoABLDESTunqXI8Yq8rr2M4BXFP0dUmjR/xmr/AC+wGcBzSP6DeX7PV3Uv78zM7W6xjL+W33IOE8YjWjZeGoucH+63LnHoZ8Pfql/Q8xRcJqy1nPcUwUauGpVoaVIrJP8Amtv5mPwTFxpVc8r2yVI6K+ri0jYwGIvh6tPrG04/sznakba7m7HynFiMuRx0c7dnYszx8Hrf8GNERlHjTObOjchxCH1fhjvjab/iX5MEdAXxI6pjsTO8mRCyeohVEwAAOgAAAAAAAAAAAAAAAAAAAAAAAAAAAHCSE3FpptNaprRpnU8J453tOVGs0pNeCb0Uns/M5vE4WUEpNXi+Uly9HsQpk5wjNFUzUo1u7qNdHeL80whw7PSdRytacopWvdJasze8/Bt0qt6EEt5v7tiSTjyjgnCeAKtCpJzlHJa2iabKlXhDTfi5bo7PgtDJhtVrK8n7GLjFabIrNJyYySMH/DH9S9mR4jCunzad1pY2JIyuKVLyttZF4SbYrSSKIABYQAAAAAAAOAAAB0AAAAAAAAAAAAAAAAAAAOHSYVrWnL5ZrruUavC/FJRdmtVF8n5Jk1Od7bktSq7qXVWMqbT4LMwq9KUXaSaezNfh8c0YxW5BxSvdevL0KuGxs4fK1p5JlWnKIns9KgrUktkc9j1eXrzKNPtXUUcs4Ql5q8WVavHb/wDT1/zf6GWGCaY/Rakjn8TO8m/Mvz4ndNKFrq3zXt+DMk9TVji12JJiAAFRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4bWGs02ny9wcytW0bcXZ9bdfUSGJ+pW81yIa3yWaor413l6EUYvYWcrybOw7PRjLDpSjGV275op9Rpz8cboRdnHsadhi+HULv9OK9LopS4XSf8Nv/JirPFjM51DC7xOlGE8sOSSvrfUpFk7Vk2AAB0AAAA4AAAAAAAAAAAAAAAAAAAHQAAA4AAAAX6j1Iaz0ACaLyK51vZmbdJeUpfuACfI/AlEtYx+IhkAGVdDHLcRlepO/1MrAB6EekTYgoAdAQAAAAAAAAAAAAAAAAAAAFAQAAAAAAUAAAP/Z"],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[26, "스노우", "Bethany Snow", ""],
+			[22, "키냐제프", "Anatoly Knyazev", ""],
+			[10, "앤서니 아이보", "Anthony Ivo", ""],
+			[5, "캐리 커터", "Carrie Cutter", "https://s-media-cache-ak0.pinimg.com/236x/0d/cb/a3/0dcba3c05bf3c153fad3487e5647d489.jpg"],
+			[4, "테드 그랜트", "Ted Grant", "https://s-media-cache-ak0.pinimg.com/236x/32/a5/4f/32a54f5d3986ec784bbae6cbe15b9c08.jpg"],
+			[1, "윌리엄 토크먼", "Clock King", "https://s-media-cache-ak0.pinimg.com/564x/e6/a6/7e/e6a67e3d374f1eea38a9aa4733dc7cd9.jpg"],
+
+			[0, "와일드독", "", ""],
+			[0, "로리 레간", "", ""],
+			[0, "애블린 샤프", "", ""],
+			[0, "이사벨 로셰프", "", ""],
+			[0, "매튜 슈리브", "", ""],
+			[0, "빅슨", "", ""],
+			[0, "빌리 말론", "", ""],
+			[0, "에이드리안 체이스", "", ""],
+			[0, "티나 볼랜드", "", ""],
+			[0, "에드워드 파이어스", "", ""],
+			[0, "카운트", "", ""],
+			[0, "사이러스 골드", "", ""],
+			[0, "브라더 블러드", "", ""],
+			[0, "가필드 린스", "", ""],
+			[0, "미스터 블랭크", "", ""],
+			[0, "바튼 매티스", "", ""],
+			[0, "벤 터너", "", ""],
+			[0, "제이비어 리드", "", ""],
+			[0, "알 오왈", "", ""],
+			[0, "다저", "", ""],
+			[0, "사이먼 라크로이", "", ""],
+			[0, "캐리 커터", "", ""],
+			[0, "디거 하크니스", "", ""],
+			[0, "대니엘 브릭웰", "", ""],
+			[0, "데미안 다크", "", ""],
+			[0, "앤디 디글", "", ""],
+			[0, "토비아스 처치", "", ""],
+			[0, "프로메테우스", "", ""],
+			[0, "쿠퍼", "Cooper Seldon", ""],
+			[0, "마이론", "Cooper Seldon", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""]
+		];
+
+		var cast_flash = [
+			[91, "배리 앨런", "Barry Allen", "https://s-media-cache-ak0.pinimg.com/236x/04/1f/82/041f82a5079535dc954690e492ddd017.jpg"],
+			[19, "헨리 앨런", "Henry Allen", "https://s-media-cache-ak0.pinimg.com/564x/e9/c2/d8/e9c2d8dd0681758c5537d80358c742e9.jpg"],
+			[12, "노라 앨런", "Nora Allen", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[69, "케이틀린 스노우", "Caitlin Snow", "https://s-media-cache-ak0.pinimg.com/236x/b1/22/6a/b1226a2e50ec3bfe632eea73da1e8c05.jpg"],
+			[69, "시스코 라몬", "Cisco Ramon", "https://s-media-cache-ak0.pinimg.com/564x/cc/c1/e8/ccc1e82c789259d5cf367f758bffb918.jpg"],
+			[69, "해리슨 웰스", "Harry Wells", "https://s-media-cache-ak0.pinimg.com/564x/c6/4b/aa/c64baac49c0a44ccce7238eb3a43d3e3.jpg"],
+			[19, "제시 웰스", "Jesse Wells", ""],
+			[10, "로니 레이먼드", "Ronnie Raymond", "https://s-media-cache-ak0.pinimg.com/236x/d5/03/0a/d5030aeaaaed669439598487f7739436.jpg"],
+
+			[69, "조 웨스트", "Joe West", "https://s-media-cache-ak0.pinimg.com/236x/ae/49/2b/ae492b512c211d733cb7fbac49886f27.jpg"],
+			[69, "아이리스 웨스트", "Iris West", "https://cdn.bleedingcool.net/wp-content/uploads/2014/02/candice-patton-irish-west-600x906.jpg"],
+			[38, "월리 웨스트", "Wally West", "http://40.media.tumblr.com/9017b0e1a574b027bb9ad233da570c9b/tumblr_nsmt0et1iW1u496xso2_250.jpg"],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[24, "데이비드 싱", "David Singh", "http://vignette1.wikia.nocookie.net/marvel_dc/images/9/98/David_Singh_%28Arrow%29_002.jpg/revision/latest?cb=20151005202753"],
+			[27, "에드워드 쏜", "Eddie Thawne", "https://s-media-cache-ak0.pinimg.com/236x/a4/61/84/a4618472649d3c6c39b579cda647c35f.jpg"],
+			[5, "", "Eobard Thawne", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+
+			[10, "레너드 스나트", "Captain Cold", "https://s-media-cache-ak0.pinimg.com/236x/5c/95/a9/5c95a9f7335c1875cdbd5bbda828152c.jpg"],
+			[5, "믹 로리", "Mick Rory", ""],
+			[4, "웨이드 아일링", "Wade Eiling", "http://vignette4.wikia.nocookie.net/marvelcrossroads/images/8/83/Wade_Eiling_%28Earth-9822%29.png/revision/latest?cb=20160330233435"],
+			[3, "토니", "Tony Woodward", "https://s-media-cache-ak0.pinimg.com/564x/06/82/d1/0682d1d7fc71714a05dd947c7ca7b32c.jpg"],
+			[2, "벳 샌 수시", " Bette Sans Souci", "https://s-media-cache-ak0.pinimg.com/564x/c2/a1/a0/c2a1a05c02ec31b32fbbbbd1e3c047fd.jpg"],
+			[1, "윌리엄 토크먼", "Clock King", "https://s-media-cache-ak0.pinimg.com/564x/e6/a6/7e/e6a67e3d374f1eea38a9aa4733dc7cd9.jpg"],
+			[0, "", "", ""],
+			[19, "제이 개릭", "Jay Garrick", ""],
+			[13, "줄리안 알버트", "Julian Albert", ""],
+			[10, "마틴 스타인", "Martin Stein", ""],
+			[10, "패티 스피봇", "Patty Spivot", ""],
+			[10, "세실 호톤", "Cecile Horton", ""],
+
+			[7, "", "Linda Park", ""],
+			[7, "", "Iron Mask", ""],
+			[6, "", "Savitar", ""],
+			[5, "", "Gypsy", ""],
+			[5, "", "Christina McGee", ""],
+			[5, "", "Francine West", ""],
+			[5, "고릴라 그로드", "Gorilla Grodd", ""],
+			[0, "제퍼슨 잭슨", "", ""],
+			[0, "스피드 포스", "", ""],
+			[0, "솔로바", "", ""],
+			[0, "뮤직 마이스터", "", ""],
+			[0, "클라이드 마든", "", ""],
+			[0, "마크 마든", "", ""],
+			[0, "댄튼 블랙", "", ""],
+			[0, "카일 님부스", "", ""],
+			[0, "하틀리 래서웨이", "", ""],
+			[0, "제임스 제시", "", ""],
+			[0, "악셀 워커", "", ""],
+			[0, "아톰 스매셔", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""]
+		];
+
+		var cast_constantine = [
+			[13, "존 콘스탄틴", "John Constantine", "https://s-media-cache-ak0.pinimg.com/564x/5c/53/34/5c533483b313a8cc8b4830aeb9f73ec3.jpg"],
+			[10, "채즈", "Chas Chandler", "https://whoswhoincomicbookmovies.files.wordpress.com/2014/09/chas_chandler_f2.jpg"],
+			[12, "제드", "Zed Martin", "https://s-media-cache-ak0.pinimg.com/236x/28/f0/ab/28f0ab15935dca51fcfa85f35224bcf3.jpg"],
+			[12, "매니", "Manny", "https://s-media-cache-ak0.pinimg.com/236x/f3/c4/ae/f3c4aeb1b0f2b1be040f9a6627c4e796.jpg"],
+			[0, "", "", ""],
+
+			[3, "파파 미드나잇", "Papa Midnite", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTOhHWWEagNCGcQvCVRgDd5dkHxTj3MVrm6rh_5m8_Ctq_ki7uR"],
+			[3, "", "Michael", ""],
+			[3, "", "Gary Lester", ""],
+			[2, "짐 코리건", "Jim Corrigan", "https://vignette2.wikia.nocookie.net/constantine/images/9/99/Jim_Corrigan.png/revision/latest/scale-to-width-down/250?cb=20141123131919"],
+			[0, "", "", ""],
+
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""]
+		];
+
+		var cast_runaways = [
+			[, "프랭크 딘", "Frank Dean", "https://vignette.wikia.nocookie.net/runaways/images/6/64/Frank_Dean-S1.png/revision/latest?cb=20171115170515"],
+			[, "레슬리 딘", "Leslie Dean", "https://vignette.wikia.nocookie.net/runaways/images/0/0c/Leslie_Dean-S1.png/revision/latest?cb=20171115170802"],
+			[, "캐롤리나 딘", "Karolina Dean", "https://vignette.wikia.nocookie.net/runaways/images/a/a9/Karolina_Dean-S1.png/revision/latest?cb=20180104171240"],
+			[, "", "", ""],
+			[, "다리우스 데이비스", "Darius Davis", "https://vignette.wikia.nocookie.net/runaways/images/2/2f/Darius_Davis-S1.png/revision/latest?cb=20171204135453"],
+			[, "조나", "Jonah", "https://vignette.wikia.nocookie.net/runaways/images/9/9a/Jonah-S1.png/revision/latest?cb=20180104031443"],
+			[, "", "Destiny Gonzalez", "https://vignette.wikia.nocookie.net/runaways/images/7/73/Destiny_Gonzalez-S1.png/revision/latest?cb=20171125051710"],
+			[, "", "Kincaid", "https://vignette.wikia.nocookie.net/runaways/images/8/82/Kincaid-S1.png/revision/latest?cb=20180111031455"],
+			[, "올드 레이스", "", ""],
+			[, "", "", ""],
+
+			[, "진 에르난데스", "Gene Hernandez", "https://vignette.wikia.nocookie.net/runaways/images/7/76/Gene_Hernandez-S1.png/revision/latest?cb=20180108023440"],
+			[, "엘리스 에르난데스", "Alice Hernandez", "https://vignette.wikia.nocookie.net/runaways/images/f/f8/Alice_Hernandez-S1.png/revision/latest?cb=20180108023423"],
+			[, "빅터 스타인", "Victor Stein", "https://vignette.wikia.nocookie.net/runaways/images/d/d1/Victor_Stein-S1.png/revision/latest?cb=20171211035107"],
+			[, "자넷 스타인", "Janet Stein", "https://vignette.wikia.nocookie.net/runaways/images/4/4a/Janet_Stein-S1.png/revision/latest?cb=20171219203533"],
+			[, "제프리 와일더", "Geoffrey Wilder", "https://vignette.wikia.nocookie.net/runaways/images/7/7c/Geoffrey_Wilder-S1.png/revision/latest?cb=20171115170300"],
+			[, "캐서린 와일더", "Catherine Wilder", "https://vignette.wikia.nocookie.net/runaways/images/3/31/Catherine_Wilder-S1.png/revision/latest?cb=20171211034502"],
+			[, "데일 요크스", "Dale Yorkes", "https://vignette.wikia.nocookie.net/runaways/images/e/ec/Dale_Yorkes-S1.png/revision/latest?cb=20180104031550"],
+			[, "스테이시 요크스", "Stacey Yorkes", "https://vignette.wikia.nocookie.net/runaways/images/4/4e/Stacey_Yorkes-S1.png/revision/latest?cb=20180104171837"],
+			[, "티나 미노루", "Tina Minoru", "https://vignette.wikia.nocookie.net/runaways/images/1/15/Tina_Minoru-S1.png/revision/latest?cb=20180104031405"],
+			[, "로버트 미노루", "Robert Minoru", "https://vignette.wikia.nocookie.net/runaways/images/f/fb/Robert_Minoru-S1.png/revision/latest?cb=20180104031510"],
+
+			[, "몰리 에르난데스", "Molly Hernandez", "https://vignette.wikia.nocookie.net/runaways/images/9/91/Molly_Hernandez-S1.png/revision/latest?cb=20171226224430"],
+			[, "", "", ""],
+			[, "체이스 스타인", "Chase Stein", "https://vignette.wikia.nocookie.net/runaways/images/a/ae/Chase_Stein-S1.png/revision/latest?cb=20180104031638"],
+			[, "", "", ""],
+			[, "알렉스 와일더", "Alex Wilder", "https://vignette.wikia.nocookie.net/runaways/images/f/fd/Alex_Wilder-S1.png/revision/latest?cb=20171219203158"],
+			[, "", "", ""],
+			[, "거트 요크스", "Gertrude Yorkes", "https://vignette.wikia.nocookie.net/runaways/images/e/ea/Gert_Yorkes-S1.png/revision/latest?cb=20180104170133"],
+			[, "", "", ""],
+			[, "니코 미노루", "Nico Minoru", "https://vignette.wikia.nocookie.net/runaways/images/5/58/Nico_Minoru-S1.png/revision/latest?cb=20171219203242"],
+			[, "에이미 미노루", "Amy Minoru", "https://vignette.wikia.nocookie.net/runaways/images/1/18/Amy_Minoru-S1.png/revision/latest?cb=20180105010447"],
+			
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""]
+		];
+
+		var cast;
+		var BoldOnOpen = new Array();
+		var BoldOnClose = new Array();
+		var BoldIndex;
+		TitleTag = location.href.split("?");
+		switch (TitleTag[1]) {
+			case "thrones":
+				cast = cast_thrones;
+				BoldIndex = 0;
+				break;
+			case "arrow":
+				cast = cast_arrow;
+				BoldIndex = 1;
+				break;
+			case "flash":
+				cast = cast_flash;
+				BoldIndex = 2;
+				break;
+			case "constantine":
+				cast = cast_constantine;
+				BoldIndex = 3;
+				break;
+			case "runaways":
+				cast = cast_runaways;
+				BoldIndex = 4;
+				break;
+		}
+
+		for (var i = 0; i < 6; i++) {
+			BoldOnOpen[i] = "";
+			BoldOnClose[i] = "";
+		}
+		BoldOnOpen[BoldIndex] = "<B>[";
+		BoldOnClose[BoldIndex] = "]</B>";
+
+		document.write("<TABLE ALIGN=CENTER>");
+		for (var total = 0; total < cast.length; total += COL_4_LINE) {
+			document.write("<TR ALIGN=CENTER>");
+			document.write("<TD COLSPAN=" + COL_4_LINE + " BGCOLOR=#d0d0f0>");
+			document.write("	<a href=JavaScript:location.href='TVCast.html?thrones'>" + BoldOnOpen[0] + "[ THRONES ]" + BoldOnClose[0] + "</a>&nbsp;&nbsp;");
+			document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>" + BoldOnOpen[1] + "[ ARROW ]" + BoldOnClose[1] + "</a>&nbsp;&nbsp;");
+			document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>" + BoldOnOpen[2] + "[ FLASH ]" + BoldOnClose[2] + "</a>&nbsp;&nbsp;");
+			document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>" + BoldOnOpen[3] + "[ CONSTANTINE ]" + BoldOnClose[3] + "</a>&nbsp;&nbsp;");
+			document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>" + BoldOnOpen[4] + "[ Runaways ]" + BoldOnClose[4] + "</a>");
+			document.write("</TD>");
+			document.write("</TR>");
+
+			document.write("<TR ALIGN=CENTER VALIGN=TOP>");
+			for (var i = 0; i < COL_4_LINE; i++) {
+
+				var cnt = "";
+				if (cast[total + i][0] > 0) {
+					cnt = " (" + cast[total + i][0] + ")";
+				}
+
+				var BoldNameOpen = "";
+				var BoldNameClose = "";
+				if (cast[total + i][0] >= NUM_BOLD) {
+					BoldNameOpen = "<B>";
+					BoldNameClose = "</B>"
+				}
+
+				document.write("<TD>" + BoldNameOpen + cast[total + i][1] + cnt + "<BR>" + cast[total + i][2] + BoldNameClose + "</TD>");
+			}
+			document.write("</TR>");
+
+			document.write("<TR ALIGN=CENTER VALIGN=TOP>");
+			for (var i = 0; i < COL_4_LINE; i++) {
+				document.write("<TD><IMG WIDTH=" + IMG_WIDTH + " SRC=" + cast[total + i][3] + "><BR><BR></TD>");
+			}
+			document.write("</TR>");
+		}
+		document.write("</TABLE>");
+
+	</script>
+
+</head>
+
+<body>
+	<TABLE ALIGN=CENTER>
+	<TR ALIGN=CENTER>
+		<TD BGCOLOR=#d0d0f0>
+			<a href='TVCast.html?thrones'>[ THRONES ]</a>&nbsp;&nbsp;
+			<a href='TVCast.html?arrow'>[ ARROW ]</a>&nbsp;&nbsp;
+			<a href='TVCast.html?flash'>[ FLASH ]</a>&nbsp;&nbsp;
+			<a href='TVCast.html?constantine'>[ CONSTANTINE ]</a>&nbsp;&nbsp;
+			<a href='TVCast.html?runaways'>[ Runaways ]</a>
+		</TD>
+	</TR>
+	</TABLE>	
+</body>
+
+</html>
