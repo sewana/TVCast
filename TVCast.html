@@ -18,6 +18,9 @@
 		}
 	</style>
 
+</head>
+
+<body>
 	<script type="text/javascript">
 		var COL_4_LINE = 10;
 		var IMG_WIDTH = 128;
@@ -280,96 +283,89 @@
 			[, "", "", ""]
 		];
 
-		var cast;
-		var BoldOnOpen = new Array();
-		var BoldOnClose = new Array();
-		var BoldIndex;
-		TitleTag = location.href.split("?");
-		switch (TitleTag[1]) {
-			case "thrones":
-				cast = cast_thrones;
-				BoldIndex = 0;
-				break;
-			case "arrow":
-				cast = cast_arrow;
-				BoldIndex = 1;
-				break;
-			case "flash":
-				cast = cast_flash;
-				BoldIndex = 2;
-				break;
-			case "constantine":
-				cast = cast_constantine;
-				BoldIndex = 3;
-				break;
-			case "runaways":
-				cast = cast_runaways;
-				BoldIndex = 4;
-				break;
-		}
+		function CastList() {
+			var cast;
+			var BoldOnOpen = new Array();
+			var BoldOnClose = new Array();
+			var BoldIndex;
 
-		for (var i = 0; i < 6; i++) {
-			BoldOnOpen[i] = "";
-			BoldOnClose[i] = "";
-		}
-		BoldOnOpen[BoldIndex] = "<B>[";
-		BoldOnClose[BoldIndex] = "]</B>";
-
-		document.write("<TABLE ALIGN=CENTER>");
-		for (var total = 0; total < cast.length; total += COL_4_LINE) {
-			document.write("<TR ALIGN=CENTER>");
-			document.write("<TD COLSPAN=" + COL_4_LINE + " BGCOLOR=#d0d0f0>");
-			document.write("	<a href=JavaScript:location.href='TVCast.html?thrones'>" + BoldOnOpen[0] + "[ THRONES ]" + BoldOnClose[0] + "</a>&nbsp;&nbsp;");
-			document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>" + BoldOnOpen[1] + "[ ARROW ]" + BoldOnClose[1] + "</a>&nbsp;&nbsp;");
-			document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>" + BoldOnOpen[2] + "[ FLASH ]" + BoldOnClose[2] + "</a>&nbsp;&nbsp;");
-			document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>" + BoldOnOpen[3] + "[ CONSTANTINE ]" + BoldOnClose[3] + "</a>&nbsp;&nbsp;");
-			document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>" + BoldOnOpen[4] + "[ Runaways ]" + BoldOnClose[4] + "</a>");
-			document.write("</TD>");
-			document.write("</TR>");
-
-			document.write("<TR ALIGN=CENTER VALIGN=TOP>");
-			for (var i = 0; i < COL_4_LINE; i++) {
-
-				var cnt = "";
-				if (cast[total + i][0] > 0) {
-					cnt = " (" + cast[total + i][0] + ")";
-				}
-
-				var BoldNameOpen = "";
-				var BoldNameClose = "";
-				if (cast[total + i][0] >= NUM_BOLD) {
-					BoldNameOpen = "<B>";
-					BoldNameClose = "</B>"
-				}
-
-				document.write("<TD>" + BoldNameOpen + cast[total + i][1] + cnt + "<BR>" + cast[total + i][2] + BoldNameClose + "</TD>");
+			var TitleTag = location.href.split("?");
+			switch (TitleTag[1]) {
+				case "thrones":
+					cast = cast_thrones;
+					BoldIndex = 0;
+					break;
+				case "arrow":
+					cast = cast_arrow;
+					BoldIndex = 1;
+					break;
+				case "flash":
+					cast = cast_flash;
+					BoldIndex = 2;
+					break;
+				case "constantine":
+					cast = cast_constantine;
+					BoldIndex = 3;
+					break;
+				case "runaways":
+					cast = cast_runaways;
+					BoldIndex = 4;
+					break;
+				default:
+					cast = cast_thrones;
+					BoldIndex = 0;
+					break;
 			}
-			document.write("</TR>");
 
-			document.write("<TR ALIGN=CENTER VALIGN=TOP>");
-			for (var i = 0; i < COL_4_LINE; i++) {
-				document.write("<TD><IMG WIDTH=" + IMG_WIDTH + " SRC=" + cast[total + i][3] + "><BR><BR></TD>");
+			for (var i = 0; i < 6; i++) {
+				BoldOnOpen[i] = "";
+				BoldOnClose[i] = "";
 			}
-			document.write("</TR>");
-		}
-		document.write("</TABLE>");
+			BoldOnOpen[BoldIndex] = "<B>[";
+			BoldOnClose[BoldIndex] = "]</B>";
 
+			document.write("<TABLE ALIGN=CENTER>");
+			for (var total = 0; total < cast.length; total += COL_4_LINE) {
+				document.write("<TR ALIGN=CENTER>");
+				document.write("<TD COLSPAN=" + COL_4_LINE + " BGCOLOR=#d0d0f0>");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?thrones'>" + BoldOnOpen[0] + "[ THRONES ]" + BoldOnClose[0] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>" + BoldOnOpen[1] + "[ ARROW ]" + BoldOnClose[1] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>" + BoldOnOpen[2] + "[ FLASH ]" + BoldOnClose[2] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>" + BoldOnOpen[3] + "[ CONSTANTINE ]" + BoldOnClose[3] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>" + BoldOnOpen[4] + "[ Runaways ]" + BoldOnClose[4] + "</a>");
+				document.write("</TD>");
+				document.write("</TR>");
+
+				document.write("<TR ALIGN=CENTER VALIGN=TOP>");
+				for (var i = 0; i < COL_4_LINE; i++) {
+
+					var cnt = "";
+					if (cast[total + i][0] > 0) {
+						cnt = " (" + cast[total + i][0] + ")";
+					}
+
+					var BoldNameOpen = "";
+					var BoldNameClose = "";
+					if (cast[total + i][0] >= NUM_BOLD) {
+						BoldNameOpen = "<B>";
+						BoldNameClose = "</B>"
+					}
+
+					document.write("<TD>" + BoldNameOpen + cast[total + i][1] + cnt + "<BR>" + cast[total + i][2] + BoldNameClose + "</TD>");
+				}
+				document.write("</TR>");
+
+				document.write("<TR ALIGN=CENTER VALIGN=TOP>");
+				for (var i = 0; i < COL_4_LINE; i++) {
+					document.write("<TD><IMG WIDTH=" + IMG_WIDTH + " SRC=" + cast[total + i][3] + "><BR><BR></TD>");
+				}
+				document.write("</TR>");
+			}
+			document.write("</TABLE>");
+		}
+
+		CastList();
 	</script>
-
-</head>
-
-<body>
-	<TABLE ALIGN=CENTER>
-	<TR ALIGN=CENTER>
-		<TD BGCOLOR=#d0d0f0>
-			<a href='TVCast.html?thrones'>[ THRONES ]</a>&nbsp;&nbsp;
-			<a href='TVCast.html?arrow'>[ ARROW ]</a>&nbsp;&nbsp;
-			<a href='TVCast.html?flash'>[ FLASH ]</a>&nbsp;&nbsp;
-			<a href='TVCast.html?constantine'>[ CONSTANTINE ]</a>&nbsp;&nbsp;
-			<a href='TVCast.html?runaways'>[ Runaways ]</a>
-		</TD>
-	</TR>
-	</TABLE>	
 </body>
 
 </html>
