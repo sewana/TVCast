@@ -1,0 +1,11 @@
+td {
+    font-size: 10pt;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
