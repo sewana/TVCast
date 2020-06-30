@@ -1,8 +1,7 @@
 <html>
-
 <head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<style type="text/css">
 		td {
@@ -18,16 +17,13 @@
 		}
 	</style>
 
-</head>
-
-<body>
 	<script type="text/javascript">
 		var COL_4_LINE = 10;
 		var IMG_WIDTH = 128;
 		var NUM_BOLD = 100;
 
 		var cast_strthings = [
-			[123, "윌 / 윌리엄 바이어스", "Will Byers", "https://vignette.wikia.nocookie.net/strangerthings8338/images/e/e4/Will_Byers.png"],
+			[123, "윌<br>윌리엄 바이어스", "Will Byers", "https://vignette.wikia.nocookie.net/strangerthings8338/images/e/e4/Will_Byers.png"],
 			[123, "조이스 바이어스", "Joyce Byers", "https://i.pinimg.com/originals/01/2a/c7/012ac7f7e2cc8671d87d79a1236428c2.jpg"],
 			[123, "조나단 바이어스", "Jonathan Byers", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73-qpBgZJBiGt7_eylzTKYCzQCmo6z1TFAIh6zmOmX_ng2Duj"],
 			[1, "로니 바이어스", "Lonnie Byers", "https://vignette.wikia.nocookie.net/strangerthings8338/images/e/ef/Lonnie.png/revision/latest?cb=20170701115006"],
@@ -38,7 +34,7 @@
 			[1, "", "Sara Hopper", "https://vignette.wikia.nocookie.net/strangerthings8338/images/e/e2/Sarah-Hopper.png/revision/latest?cb=20160815220035"],
 			[0, "", "", ""],
 
-			[123, "마이크 / 마이클 윌러", "Mike Wheeler", "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/48/Mike_Wheeler_S1.png/revision/latest/scale-to-width-down/310?cb=20171025205131"],
+			[123, "마이크<br>마이클 윌러", "Mike Wheeler", "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/48/Mike_Wheeler_S1.png/revision/latest/scale-to-width-down/310?cb=20171025205131"],
 			[123, "낸시 윌러", "Nancy Wheeler", "https://vignette.wikia.nocookie.net/strangerthings8338/images/5/5d/Nancy_S2.png/revision/latest?cb=20171229091940"],
 			[123, "카렌 윌러", "Karen Wheeler", "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/6d/Karen_Wheeler_001.png/revision/latest/scale-to-width-down/310?cb=20160804154504"],
 			[123, "테드 윌러", "Ted Wheeler", "https://vignette.wikia.nocookie.net/strangerthings8338/images/b/bf/Ted_Wheeler.png/revision/latest?cb=20171108231928"],
@@ -49,7 +45,7 @@
 			[123, "플로", "Florence", "https://vignette.wikia.nocookie.net/strangerthings8338/images/d/d9/Florence.png/revision/latest?cb=20170303104046"],
 			[0, "", "", ""],
 
-			[123, "엘 / 일레븐", "Eleven", "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Eleven_%28Stranger_Things%29.jpg/220px-Eleven_%28Stranger_Things%29.jpg"],
+			[123, "엘<br>일레븐", "Eleven", "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Eleven_%28Stranger_Things%29.jpg/220px-Eleven_%28Stranger_Things%29.jpg"],
 			[0, "", "", ""],
 			[123, "더스틴 핸더슨", "Dustin Henderson", "https://vignette.wikia.nocookie.net/strangerthings8338/images/1/18/Dustin_S2.png/revision/latest?cb=20180319174421"],
 			[23, "", "Claudia Henderson", "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/6b/Claudia_Henderson_Family_tree_icon_001.png/revision/latest?cb=20171028225902"],
@@ -71,7 +67,7 @@
 			[1, "제임스", "James", "https://vignette.wikia.nocookie.net/strangerthings8338/images/0/00/James.png/revision/latest?cb=20170228152919"],
 			[0, "", "", ""],
 
-			[1, "밥 / 바바라 홀랜드", "Barb Holland", "https://vignette.wikia.nocookie.net/strangerthings8338/images/2/25/Barbara_Holland.jpg"],
+			[1, "밥<br>바바라 홀랜드", "Barb Holland", "https://vignette.wikia.nocookie.net/strangerthings8338/images/2/25/Barbara_Holland.jpg"],
 			[12, "", "Marsha Holland", "https://vignette.wikia.nocookie.net/tvdatabase/images/f/f3/Stranger_Things_2x01_003.jpg/revision/latest?cb=20180104133028"],
 			[2, "", "Mr. Holland", "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/70/MrHolland.png/revision/latest?cb=20171117233732"],
 			[0, "", "", ""],
@@ -104,7 +100,7 @@
 			[2, "", "Susan Hargrove", "https://static.tvmaze.com/uploads/images/medium_portrait/134/335718.jpg"],
 			[2, "", "", ""],
 
-			[2, "", "Kali / Eight", "https://vignette.wikia.nocookie.net/strangerthings8338/images/9/9e/Kali.png/revision/latest?cb=20171028095030"],
+			[2, "", "Kali<br>Eight", "https://vignette.wikia.nocookie.net/strangerthings8338/images/9/9e/Kali.png/revision/latest?cb=20171028095030"],
 			[2, "", "Funshine", "https://static.tvmaze.com/uploads/images/medium_portrait/133/333752.jpg"],
 			[2, "", "Axel", "https://static.tvmaze.com/uploads/images/medium_portrait/133/333755.jpg"],
 			[2, "", "Dottie", "https://i.pinimg.com/736x/e2/0b/32/e20b32d4a3db84cf72647247a29febf9.jpg"],
@@ -129,10 +125,10 @@
 		];
 
 		var cast_arrow = [
-			[138, "올리버 퀸", "Oliver Queen", "https://s-media-cache-ak0.pinimg.com/236x/f2/41/dc/f241dc94a737788ea383df120a4d64b7.jpg"],
-			[115, "테아 퀸", "Thea Queen", "https://s-media-cache-ak0.pinimg.com/236x/b4/54/93/b4549397b7347785f9686fe3838ee357.jpg"],
+			[138, "올리버 퀸", "Oliver Queen<br>Green Arrow", "https://s-media-cache-ak0.pinimg.com/236x/f2/41/dc/f241dc94a737788ea383df120a4d64b7.jpg"],
+			[115, "테아 퀸", "Thea Queen<br>Speedy", "https://s-media-cache-ak0.pinimg.com/236x/b4/54/93/b4549397b7347785f9686fe3838ee357.jpg"],
 			[47, "모이라 퀸", "Moira Queen", "https://s-media-cache-ak0.pinimg.com/236x/b4/a5/fc/b4a5fc0a044297b56e966c5a03a8c61b.jpg"],
-			[7, "로버트 퀸", "Robert Queen", "https://vignette.wikia.nocookie.net/marvel_dc/images/9/93/Robert_Queen_Arrow_TV_Series_002.jpg/revision/latest?cb=20130422232527"],
+			[7, "로버트 퀸", "Robert Queen", "https://static.tvmaze.com/uploads/images/medium_portrait/37/93617.jpg"],
 			[14, "월터 스틸", "Walter Steele", "https://s-media-cache-ak0.pinimg.com/236x/1c/5b/ac/1c5bac8e15e92cfa9b809f62fab9089b.jpg"],
 
 			[115, "존 디글", "John Diggle", "https://s-media-cache-ak0.pinimg.com/564x/f8/eb/0e/f8eb0e47e970b1749c0ba66fe7f7ab5e.jpg"],
@@ -166,24 +162,31 @@
 			[0, "", "", ""],
 
 			[16, "닛사 알 굴", "Nyssa al Ghul", "https://s-media-cache-ak0.pinimg.com/236x/12/6e/f0/126ef043d001e2ec35149bf8067874cc.jpg"],
-			[10, "라스 알 굴", "Ra's al Ghul", "https://pmctvline2.files.wordpress.com/2015/12/legends-of-tomorrow-matt-nable.jpg?w=620"],
+			[10, "라스 알 굴", "Ra's al Ghul", "https://comicvine1.cbsistatic.com/uploads/scale_medium/11127/111274365/6116272-11.jpg"],
 			[5, "탈리아 알 굴", "", "http://mblogthumb1.phinf.naver.net/MjAxNzAzMDVfMjMx/MDAxNDg4NzEzNjM3OTg2.3apm-8G-QyC-lq2v2OQDz80n00QfvFNjWgJ-YRctUrIg.3qH5vOJeSh2SZEPUwwRz2UZ2ezRwAGZ6dTni1BysKd0g.JPEG.yomygirlmon/MV5BNmI1YWE3ZDgtNGJhYy00MjNiLWI0ODUtMTZkMzI3MTBiYjIxL2ltYWdlXkEyXkFqcGdeQXVyNjc5Mjg0NjU._V1_SY1000_CR0%2C0%2C666%2C1000_AL_.jpg?type=w800"],
 			[0, "", "", ""],
 			[0, "", "", ""],
 
 			[19, "야마시로 마세오", "Maseo Yamashiro", "https://s-media-cache-ak0.pinimg.com/236x/45/6f/6f/456f6f418420cad86752459a3be83f49.jpg"],
 			[15, "야마시로 타츠", "Tatsu Yamashiro", "https://s-media-cache-ak0.pinimg.com/236x/66/b1/48/66b1484f2cf33ad712a6d5d2686d1f38.jpg"],
-			[13, "야마시로 아키오", "Akio Yamashiro", "data:image/jpeg;base64,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"],
+			[13, "야마시로 아키오", "Akio Yamashiro", "https://assets.mycast.io/actor_images/actor-brandon-nomura-52155_large.jpeg?1582650981"],
 			[0, "", "", ""],
 			[0, "", "", ""],
 
-			[26, "스노우", "Bethany Snow", ""],
-			[22, "키냐제프", "Anatoly Knyazev", ""],
-			[10, "앤서니 아이보", "Anthony Ivo", ""],
 			[5, "캐리 커터", "Carrie Cutter", "https://s-media-cache-ak0.pinimg.com/236x/0d/cb/a3/0dcba3c05bf3c153fad3487e5647d489.jpg"],
 			[4, "테드 그랜트", "Ted Grant", "https://s-media-cache-ak0.pinimg.com/236x/32/a5/4f/32a54f5d3986ec784bbae6cbe15b9c08.jpg"],
 			[1, "윌리엄 토크먼", "Clock King", "https://s-media-cache-ak0.pinimg.com/564x/e6/a6/7e/e6a67e3d374f1eea38a9aa4733dc7cd9.jpg"],
-
+			[1, "데미안 다크", "Damien Darhk", "https://i.pinimg.com/originals/61/42/ff/6142ff538f9e4602809ee180f6e3523f.jpg"],
+			[1, "미나 파이야드", "Mina Fayad", "https://vignette.wikia.nocookie.net/antagonisten/images/c/c4/Mina_Fayad.png/revision/latest?cb=20190418005928&path-prefix=de"],
+			[0, "제레미 텔<br>더블다운", "Jeremy Tell<br>Doubledown", "https://i.pinimg.com/originals/76/ab/7c/76ab7c1ae77b397e4a099dd1e80129ff.jpg"],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "", "", ""],
+			[0, "알렉스 데이비스", "Alex Davis", "https://static.tvmaze.com/uploads/images/medium_portrait/94/237169.jpg"],
+			[26, "스노우", "Bethany Snow", ""],
+			[22, "키냐제프", "Anatoly Knyazev", ""],
+			[10, "앤서니 아이보", "Anthony Ivo", ""],
 			[0, "와일드독", "", ""],
 			[0, "로리 레간", "", ""],
 			[0, "애블린 샤프", "", ""],
@@ -208,77 +211,75 @@
 			[0, "캐리 커터", "", ""],
 			[0, "디거 하크니스", "", ""],
 			[0, "대니엘 브릭웰", "", ""],
-			[0, "데미안 다크", "", ""],
 			[0, "앤디 디글", "", ""],
 			[0, "토비아스 처치", "", ""],
 			[0, "프로메테우스", "", ""],
 			[0, "쿠퍼", "Cooper Seldon", ""],
 			[0, "마이론", "Cooper Seldon", ""],
 			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
 			[0, "", "", ""]
 		];
 
 		var cast_flash = [
-			[91, "배리 앨런", "Barry Allen", "https://s-media-cache-ak0.pinimg.com/236x/04/1f/82/041f82a5079535dc954690e492ddd017.jpg"],
+			[91, "배리 앨런<br>플래시", "Barry Allen<br>Flash", "https://s-media-cache-ak0.pinimg.com/236x/04/1f/82/041f82a5079535dc954690e492ddd017.jpg"],
 			[19, "헨리 앨런", "Henry Allen", "https://s-media-cache-ak0.pinimg.com/564x/e9/c2/d8/e9c2d8dd0681758c5537d80358c742e9.jpg"],
 			[12, "노라 앨런", "Nora Allen", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-
 			[69, "케이틀린 스노우", "Caitlin Snow", "https://s-media-cache-ak0.pinimg.com/236x/b1/22/6a/b1226a2e50ec3bfe632eea73da1e8c05.jpg"],
-			[69, "시스코 라몬", "Cisco Ramon", "https://s-media-cache-ak0.pinimg.com/564x/cc/c1/e8/ccc1e82c789259d5cf367f758bffb918.jpg"],
-			[69, "해리슨 웰스", "Harry Wells", "https://s-media-cache-ak0.pinimg.com/564x/c6/4b/aa/c64baac49c0a44ccce7238eb3a43d3e3.jpg"],
-			[19, "제시 웰스", "Jesse Wells", ""],
-			[10, "로니 레이먼드", "Ronnie Raymond", "https://s-media-cache-ak0.pinimg.com/236x/d5/03/0a/d5030aeaaaed669439598487f7739436.jpg"],
+			[69, "시스코 라몬<br>바이브", "Cisco Ramon<br>Vibe", "https://s-media-cache-ak0.pinimg.com/564x/cc/c1/e8/ccc1e82c789259d5cf367f758bffb918.jpg"],
+			[69, "해리슨 '해리' 웰스", "Harrison 'Harry' Wells", "https://s-media-cache-ak0.pinimg.com/564x/c6/4b/aa/c64baac49c0a44ccce7238eb3a43d3e3.jpg"],
+			[19, "제시 웰스", "Jesse Wells", "https://static.tvmaze.com/uploads/images/medium_portrait/95/239400.jpg"],
+			[10, "로니 레이먼드<br>파이어스톰", "Ronnie Raymond<br>Firestorm", "https://s-media-cache-ak0.pinimg.com/236x/d5/03/0a/d5030aeaaaed669439598487f7739436.jpg"],
+			[10, "마틴 스타인<br>파이어스톰", "Martin Stein<br>Firestorm", "https://i.pinimg.com/originals/5e/b3/d0/5eb3d00090f11ad26672016319bbd857.jpg"],
+			[1, "제퍼슨 잭슨<br>파이어스톰", "Jefferson 'Jax' Jackson<br>Firestorm", "https://vignette.wikia.nocookie.net/theflash/images/9/9e/Firestorm_Franz_Drameh.jpg"],
 
 			[69, "조 웨스트", "Joe West", "https://s-media-cache-ak0.pinimg.com/236x/ae/49/2b/ae492b512c211d733cb7fbac49886f27.jpg"],
-			[69, "아이리스 웨스트", "Iris West", "https://cdn.bleedingcool.net/wp-content/uploads/2014/02/candice-patton-irish-west-600x906.jpg"],
-			[38, "월리 웨스트", "Wally West", "http://40.media.tumblr.com/9017b0e1a574b027bb9ad233da570c9b/tumblr_nsmt0et1iW1u496xso2_250.jpg"],
-			[0, "", "", ""],
-			[0, "", "", ""],
-
-			[24, "데이비드 싱", "David Singh", "http://vignette1.wikia.nocookie.net/marvel_dc/images/9/98/David_Singh_%28Arrow%29_002.jpg/revision/latest?cb=20151005202753"],
+			[69, "아이리스 웨스트", "Iris West", "https://vignette.wikia.nocookie.net/marvel_dc/images/7/78/Iris_West_Arrow_0003.jpg/revision/latest/top-crop/width/360/height/450"],
+			[2, "프랜신 웨스트", "Francine West", "https://static.tvmaze.com/uploads/images/medium_portrait/26/66534.jpg"],
+			[38, "월리 웨스트<br>월라스", "Wally West", "http://40.media.tumblr.com/9017b0e1a574b027bb9ad233da570c9b/tumblr_nsmt0et1iW1u496xso2_250.jpg"],
+			[24, "데이비드 싱", "David Singh", "https://vignette.wikia.nocookie.net/marvel_dc/images/6/6a/David_Singh_%28Arrowverse%29_002.jpg/revision/latest/top-crop/width/360/height/450"],
 			[27, "에드워드 쏜", "Eddie Thawne", "https://s-media-cache-ak0.pinimg.com/236x/a4/61/84/a4618472649d3c6c39b579cda647c35f.jpg"],
 			[5, "", "Eobard Thawne", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
+			[10, "패티 스피봇", "Patty Spivot", "https://vignette.wikia.nocookie.net/toonultra/images/d/db/Patty_Spivot.png/revision/latest/top-crop/width/360/height/450"],
+			[19, "제이 개릭<br>플래시", "Jay Garrick<br>Flash", "https://vignette.wikia.nocookie.net/arrow/images/d/dc/Jay_Garrick_Teddy_Sears.png/revision/latest/top-crop/width/360/height/450"],
 
-			[10, "레너드 스나트", "Captain Cold", "https://s-media-cache-ak0.pinimg.com/236x/5c/95/a9/5c95a9f7335c1875cdbd5bbda828152c.jpg"],
-			[5, "믹 로리", "Mick Rory", ""],
+			[10, "레너드 스나트<br>캡틴 콜드", "Leonard Snart<br>Captain Cold", "https://s-media-cache-ak0.pinimg.com/236x/5c/95/a9/5c95a9f7335c1875cdbd5bbda828152c.jpg"],
+			[1, "리사 스나트<br>골든 글라이더", "Lisa Snart<br>Golden Glider", "https://vignette.wikia.nocookie.net/theflash/images/1/15/Lisa_Snart_Peyton_List-1.jpg/revision/latest/scale-to-width-down/250"],
+			[1, "루이스 스나트", "Lewis Snart", "https://cdn1.thr.com/sites/default/files/imagecache/NFE_portrait/2015/07/mi-pic.jpg"],
+			[5, "믹 로리", "Mick Rory", "https://i.pinimg.com/564x/e8/39/27/e83927a7fc75ad8b1795febe57547a90.jpg"],
 			[4, "웨이드 아일링", "Wade Eiling", "http://vignette4.wikia.nocookie.net/marvelcrossroads/images/8/83/Wade_Eiling_%28Earth-9822%29.png/revision/latest?cb=20160330233435"],
 			[3, "토니", "Tony Woodward", "https://s-media-cache-ak0.pinimg.com/564x/06/82/d1/0682d1d7fc71714a05dd947c7ca7b32c.jpg"],
 			[2, "벳 샌 수시", " Bette Sans Souci", "https://s-media-cache-ak0.pinimg.com/564x/c2/a1/a0/c2a1a05c02ec31b32fbbbbd1e3c047fd.jpg"],
 			[1, "윌리엄 토크먼", "Clock King", "https://s-media-cache-ak0.pinimg.com/564x/e6/a6/7e/e6a67e3d374f1eea38a9aa4733dc7cd9.jpg"],
-			[0, "", "", ""],
-			[19, "제이 개릭", "Jay Garrick", ""],
+			[1, "클라이드 마든", "Clyde Mardon", "https://vignette.wikia.nocookie.net/marvel_dc/images/a/a6/Clyde_Mardon_%28Arrowverse%29_001.jpg/revision/latest/top-crop/width/360/height/450"],
+			[1, "마크 마든<br>웨더위저드", "Mark Mardon<br>Weather Wizard", "https://i.pinimg.com/originals/2a/17/83/2a178395a2ffc8aeb81611dea66de389.jpg"],
+			[1, "줌", "Zoom", "https://vignette.wikia.nocookie.net/villains/images/f/fb/Zoom_001.jpg/revision/latest/top-crop/width/360/height/450"],
+			[1, "아톰 스매셔", "", "https://beckett-www.s3.amazonaws.com/news/news-content/uploads/2017/06/2017-Cryptozoic-The-Flash-Season-2-Metas-Atom-Smasher.jpg"],
+			[1, "헨리 휴윗", "Henry Hewitt<br>Tokamak", "https://vignette.wikia.nocookie.net/marvel_dc/images/6/66/Henry_Hewitt_%28Arrowverse%29_001.png/revision/latest/top-crop/width/360/height/450"],
+			[7, "린다 박", "Linda Park<br>Dr. Light", "https://vignette.wikia.nocookie.net/arrow/images/7/7b/Linda_Park.png/revision/latest/top-crop/width/360/height/450"],
+			[1, "그로드", "Grodd", "https://vignette.wikia.nocookie.net/arrow/images/3/3c/Grodd_watching_Flash_vs_Solovar.png/revision/latest/top-crop/width/360/height/450"],
+			[, "반달 새비지", "Vandal Savage", "https://upload.wikimedia.org/wikipedia/en/f/f4/Vandal_Savage_%28Casper_Crump%29.png?1592757458284"],
+			[1, "캔드라 손더스<br>호크걸", "Kendra Saunders<br>Hawkgirl", "https://vignette.wikia.nocookie.net/arrow/images/e/e3/Kendra_Saunders.png/revision/latest/top-crop/width/360/height/450"],
+			[, "", "Carter Hall<br>Khufu", "https://vignette.wikia.nocookie.net/kingsfan-characters/images/f/f0/Hall%2C_carter.jpg/revision/latest/top-crop/width/360/height/450"],
+			[, "", "Samantha Clayton", "https://i.pinimg.com/originals/ee/66/8a/ee668aa4d2ee45017cd42008c6ecee97.jpg"],
+			[, "제임스 제시", "James Jesse", "https://vignette.wikia.nocookie.net/marvel_dc/images/5/55/James_Jesse_Arrow_002.png/revision/latest/top-crop/width/360/height/450"],
+			[, "트릭스터", "The Trickster", "https://vignette.wikia.nocookie.net/marvel_dc/images/5/55/James_Jesse_Arrow_002.png/revision/latest/top-crop/width/360/height/450"],
 			[13, "줄리안 알버트", "Julian Albert", ""],
-			[10, "마틴 스타인", "Martin Stein", ""],
-			[10, "패티 스피봇", "Patty Spivot", ""],
 			[10, "세실 호톤", "Cecile Horton", ""],
-
-			[7, "", "Linda Park", ""],
 			[7, "", "Iron Mask", ""],
 			[6, "", "Savitar", ""],
 			[5, "", "Gypsy", ""],
 			[5, "", "Christina McGee", ""],
 			[5, "", "Francine West", ""],
-			[5, "고릴라 그로드", "Gorilla Grodd", ""],
+			[, "", "", ""],
 			[0, "제퍼슨 잭슨", "", ""],
 			[0, "스피드 포스", "", ""],
 			[0, "솔로바", "", ""],
 			[0, "뮤직 마이스터", "", ""],
-			[0, "클라이드 마든", "", ""],
-			[0, "마크 마든", "", ""],
 			[0, "댄튼 블랙", "", ""],
 			[0, "카일 님부스", "", ""],
 			[0, "하틀리 래서웨이", "", ""],
-			[0, "제임스 제시", "", ""],
-			[0, "악셀 워커", "", ""],
-			[0, "아톰 스매셔", "", ""],
 			[0, "", "", ""],
+			[0, "악셀 워커", "", ""],
 			[0, "", "", ""]
 		];
 
@@ -292,27 +293,9 @@
 			[3, "파파 미드나잇", "Papa Midnite", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTOhHWWEagNCGcQvCVRgDd5dkHxTj3MVrm6rh_5m8_Ctq_ki7uR"],
 			[3, "", "Michael", ""],
 			[3, "", "Gary Lester", ""],
-			[2, "짐 코리건", "Jim Corrigan", "https://vignette2.wikia.nocookie.net/constantine/images/9/99/Jim_Corrigan.png/revision/latest/scale-to-width-down/250?cb=20141123131919"],
+			[2, "짐 코리건", "Jim Corrigan", "https://vignette2.wikia.nocookie.net/constantine/images/9/99/Jim_Corrigan.png/revision/latest/scale-to-width-down/250"],
 			[0, "", "", ""],
 
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
-			[0, "", "", ""],
 			[0, "", "", ""]
 		];
 
@@ -362,6 +345,42 @@
 			[, "", "", ""]
 		];
 
+		var cast_supergirl = [
+			[1, "카라 댄버스", "Kara Danvers", "https://66.media.tumblr.com/f38ee0485ade97c1a6cbc49c1b5ef5c7/tumblr_orrno6fU5c1w9jjzno6_1280.png"],
+			[, "카라 조엘<br>슈퍼걸", "Kara Zor-el<br>Supergirl", "https://vignette.wikia.nocookie.net/shipping/images/4/43/Kara.jpeg"],
+			[1, "알렉스 댄버스", "Alex Danvers", "https://img.sharetv.com/shows/characters/large/supergirl.alexandra_danvers.jpg"],
+			[, "엘리자 댄버스", "Eliza Danvers", "https://comicvine1.cbsistatic.com/uploads/original/1/18154/5430833-4285299868-latest"],
+			[, "제레미아 댄버스", "Jeremiah Danvers", "https://vignette.wikia.nocookie.net/headhuntersholosuite/images/0/04/Supergirl_1x01_002.jpg/revision/latest/top-crop/width/360/height/450"],
+			[1, "윈 스콧", "Winn Schott", "https://vignette.wikia.nocookie.net/p__/images/a/af/Winn2.jpg/revision/latest?cb=20151110220250&path-prefix=protagonist"],
+			[1, "캣 그랜트", "Cat Grant", "https://i.pinimg.com/564x/22/77/7c/22777cb8bbdd3b452a2de0cef1759363.jpg"],
+			[, "", "Katherine Grant", "https://static.tvmaze.com/uploads/images/medium_portrait/32/81997.jpg"],
+			[1, "지미 올슨", "James 'Jimmy' Olsen", "http://tib.cjcs.com/files/2017/12/SGS3JO001-600.jpg"],
+			[1, "행크 핸쇼", "Hank Henshaw", "https://i.pinimg.com/564x/b4/5f/fa/b45ffa8d564d8da339809b321182868a.jpg"],
+			[, "존 존스", "J'onn J'onzz", "https://pm1.narvii.com/7023/33088261f2963f138fd762160bf025810038765dr1-1433-2048v2_hq.jpg"],
+			[1, "", "Hartmann", "https://vignette.wikia.nocookie.net/arrow/images/a/aa/Hartmann.png/revision/latest/top-crop/width/360/height/450"],
+
+			[, "알룰라 조엘", "Alura Zor-El", "https://pbs.twimg.com/profile_images/749002341072900096/X4xInAaN_400x400.jpg"],
+			[1, "아스트라", "Astra", "https://vignette.wikia.nocookie.net/arrow/images/4/4b/Astra.png/revision/latest/top-crop/width/360/height/450"],
+			[1, "", "Gor", "https://vignette.wikia.nocookie.net/arrow/images/5/5d/Gor.png/revision/latest/top-crop/width/360/height/450"],
+			[, "", "Hellgrammite", "https://vignette.wikia.nocookie.net/arrow/images/e/e5/Hellgrammite.png/revision/latest/top-crop/width/360/height/450"],
+			[, "<br>리액트론", "Ben Krull<br>Reactron", "https://vignette.wikia.nocookie.net/villains/images/6/64/Reactron-0.png"],
+			[, "에단 녹스", "Ethan Knox", "https://vignette.wikia.nocookie.net/tvdatabase/images/9/98/Supergirl_1x05_004.jpg"],
+			[, "레슬리<br>라이브와이어", "Leslie Willis<br>Livewire", "https://vignette.wikia.nocookie.net/arrow/images/5/53/Leslie_Willis.png/revision/latest/top-crop/width/360/height/450"],
+			[, "레드 토네이도", "Red Tornado", "https://vignette.wikia.nocookie.net/villains/images/5/5d/RedTornado.png/revision/latest/top-crop/width/360/height/450"],
+			[, "", "", ""],
+
+			[1, "맥스웰 로드", "Maxwell Lord", "https://media.aintitcool.com/media/uploads/2015/herc/facinelli_medium.jpg"],
+			[, "루시 레인", "Lucy Lane", "https://pbs.twimg.com/profile_images/786146816626614272/oIJrV5rI_400x400.jpg"],
+			[, "", "Sam Lane", "https://vignette.wikia.nocookie.net/marvel_dc/images/4/43/Sam_Lane_Supergirl_TV_Series_0001.jpg/revision/latest/top-crop/width/360/height/450"],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""],
+			[, "", "", ""]
+		];
+
 		function CastList() {
 			var cast;
 			var BoldOnOpen = new Array();
@@ -370,16 +389,12 @@
 
 			var TitleTag = location.href.split("?");
 			switch (TitleTag[1]) {
-				case "strthings":
-					cast = cast_strthings;
-					BoldIndex = 0;
-					break;
-				case "arrow":
-					cast = cast_arrow;
-					BoldIndex = 1;
-					break;
 				case "flash":
 					cast = cast_flash;
+					BoldIndex = 1;
+					break;
+				case "supergirl":
+					cast = cast_supergirl;
 					BoldIndex = 2;
 					break;
 				case "constantine":
@@ -390,13 +405,17 @@
 					cast = cast_runaways;
 					BoldIndex = 4;
 					break;
-				default:
+				case "strthings":
 					cast = cast_strthings;
+					BoldIndex = 5;
+					break;
+				default:
+					cast = cast_arrow;
 					BoldIndex = 0;
 					break;
 			}
 
-			for (var i = 0; i < 6; i++) {
+			for (var i = 0; i < cast.length; i++) {
 				BoldOnOpen[i] = "";
 				BoldOnClose[i] = "";
 			}
@@ -407,11 +426,12 @@
 			for (var total = 0; total < cast.length; total += COL_4_LINE) {
 				document.write("<TR ALIGN=CENTER>");
 				document.write("<TD COLSPAN=" + COL_4_LINE + " BGCOLOR=#d0d0f0>");
-				document.write("	<a href=JavaScript:location.href='TVCast.html?thrones'>" + BoldOnOpen[0] + "[ Stranger Things ]" + BoldOnClose[0] + "</a>&nbsp;&nbsp;");
-				document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>" + BoldOnOpen[1] + "[ ARROW ]" + BoldOnClose[1] + "</a>&nbsp;&nbsp;");
-				document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>" + BoldOnOpen[2] + "[ FLASH ]" + BoldOnClose[2] + "</a>&nbsp;&nbsp;");
-				document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>" + BoldOnOpen[3] + "[ CONSTANTINE ]" + BoldOnClose[3] + "</a>&nbsp;&nbsp;");
-				document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>" + BoldOnOpen[4] + "[ Runaways ]" + BoldOnClose[4] + "</a>");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>"			+ BoldOnOpen[0] + "[ ARROW ]"			+ BoldOnClose[0] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>"			+ BoldOnOpen[1] + "[ FLASH ]"			+ BoldOnClose[1] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?supergirl'>"		+ BoldOnOpen[2] + "[ SUPER GIRL ]"		+ BoldOnClose[2] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>"	+ BoldOnOpen[3] + "[ CONSTANTINE ]"		+ BoldOnClose[3] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>"		+ BoldOnOpen[4] + "[ RUNAWAYS ]"		+ BoldOnClose[4] + "</a>&nbsp;&nbsp;");
+				document.write("	<a href=JavaScript:location.href='TVCast.html?strthings'>"		+ BoldOnOpen[5] + "[ STRANGER THINGS ]"	+ BoldOnClose[5] + "</a>");
 				document.write("</TD>");
 				document.write("</TR>");
 
@@ -420,7 +440,7 @@
 
 					var cnt = "";
 					if (cast[total + i][0] > 0) {
-						cnt = " (" + cast[total + i][0] + ")";
+						cnt = "(" + cast[total + i][0] + ")";
 					}
 
 					var BoldNameOpen = "";
@@ -430,21 +450,25 @@
 						BoldNameClose = "</B>"
 					}
 
-					document.write("<TD>" + BoldNameOpen + cast[total + i][1] + cnt + "<BR>" + cast[total + i][2] + BoldNameClose + "</TD>");
+					document.write("<TD>" + BoldNameOpen + cnt + "<BR>" + cast[total + i][1] + "<BR>" + cast[total + i][2] + BoldNameClose + "</TD>");
 				}
 				document.write("</TR>");
 
 				document.write("<TR ALIGN=CENTER VALIGN=TOP>");
-				for (var i = 0; i < COL_4_LINE; i++) {
-					document.write("<TD><IMG WIDTH=" + IMG_WIDTH + " SRC=" + cast[total + i][3] + "><BR><BR></TD>");
+				for (var j = 0; j < COL_4_LINE; j++) {
+					document.write("<TD><IMG WIDTH=" + IMG_WIDTH + " SRC=" + cast[total + j][3] + "><BR><BR></TD>");
 				}
 				document.write("</TR>");
 			}
 			document.write("</TABLE>");
 		}
 
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
 		CastList();
 	</script>
 </body>
-
 </html>
