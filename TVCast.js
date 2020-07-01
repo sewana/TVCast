@@ -406,12 +406,12 @@ function CastList() {
     for (var total = 0; total < cast.length; total += COL_4_LINE) {
         document.write("<TR ALIGN=CENTER>");
         document.write("<TD COLSPAN=" + COL_4_LINE + " BGCOLOR=#d0d0f0>");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?arrow'>"			+ BoldOnOpen[0] + "[ ARROW ]"			+ BoldOnClose[0] + "</a>&nbsp;&nbsp;");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?flash'>"			+ BoldOnOpen[1] + "[ FLASH ]"			+ BoldOnClose[1] + "</a>&nbsp;&nbsp;");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?supergirl'>"		+ BoldOnOpen[2] + "[ SUPER GIRL ]"		+ BoldOnClose[2] + "</a>&nbsp;&nbsp;");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?constantine'>"	+ BoldOnOpen[3] + "[ CONSTANTINE ]"		+ BoldOnClose[3] + "</a>&nbsp;&nbsp;");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?runaways'>"		+ BoldOnOpen[4] + "[ RUNAWAYS ]"		+ BoldOnClose[4] + "</a>&nbsp;&nbsp;");
-        document.write("	<a href=JavaScript:location.href='TVCast.html?strthings'>"		+ BoldOnOpen[5] + "[ STRANGER THINGS ]"	+ BoldOnClose[5] + "</a>");
+        document.write("	<a href=JavaScript:location.href='index.html?arrow'>"			+ BoldOnOpen[0] + "[ ARROW ]"			+ BoldOnClose[0] + "</a>&nbsp;&nbsp;");
+        document.write("	<a href=JavaScript:location.href='index.html?flash'>"			+ BoldOnOpen[1] + "[ FLASH ]"			+ BoldOnClose[1] + "</a>&nbsp;&nbsp;");
+        document.write("	<a href=JavaScript:location.href='index.html?supergirl'>"		+ BoldOnOpen[2] + "[ SUPER GIRL ]"		+ BoldOnClose[2] + "</a>&nbsp;&nbsp;");
+        document.write("	<a href=JavaScript:location.href='index.html?constantine'>"	+ BoldOnOpen[3] + "[ CONSTANTINE ]"		+ BoldOnClose[3] + "</a>&nbsp;&nbsp;");
+        document.write("	<a href=JavaScript:location.href='index.html?runaways'>"		+ BoldOnOpen[4] + "[ RUNAWAYS ]"		+ BoldOnClose[4] + "</a>&nbsp;&nbsp;");
+        document.write("	<a href=JavaScript:location.href='index.html?strthings'>"		+ BoldOnOpen[5] + "[ STRANGER THINGS ]"	+ BoldOnClose[5] + "</a>");
         document.write("</TD>");
         document.write("</TR>");
 
